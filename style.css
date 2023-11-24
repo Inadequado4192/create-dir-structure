@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    display       : flex;
+    flex-direction: column;
+    gap           : 10px;
+
+    min-height    : 100vh;
+    margin    : 0;
+    padding   : 20px;
+    background: #131313;
+    color     : #EEE;
+}
+
+#settings,
+#container {
+    border       : 1px solid;
+    border-radius: 5px;
+    padding      : 10px;
+}
+
+#settings {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0;
+}
+
+#settings>label {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+
+    align-items: flex-start;
+    user-select: none;
+    cursor: pointer;
+}
+#settings>label>input[type=checkbox] {
+    display: none;
+}
+#settings>label>input[type=checkbox]:checked  ~ span {
+    color: green;
+}
+#settings>label>input[type=checkbox]:not(:checked) ~ span {
+    color: red;
+}
+
+#container {
+    display    : block;
+    min-height : 200px;
+    width      : 100%;
+    white-space: pre;
+    font-family: monospace;
+}
+
+span[red] {
+    color: rgb(194, 21, 21);
+}
